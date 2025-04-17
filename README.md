@@ -115,7 +115,9 @@ ORDER BY play_count DESC
 LIMIT 10
 ```
 
-Visualization: Table or Bar chart
+![Analytics Dashboard Example 1](media/image1.png)
+
+![Analytics Dashboard Example 2](media/image2.png)
 
 
 ### 5.4. Playback Errors Over Time
