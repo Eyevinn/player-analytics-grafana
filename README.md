@@ -53,7 +53,7 @@ In Grafana's left menu, go to Configuration (⚙️) → Data Sources → Add da
 Choose ClickHouse.
 
 Fill in connection details:
-- URL: http://<clickhouse-host>:8123
+- https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
 - Default database: default
 - User / Password as appropriate
 
@@ -113,6 +113,7 @@ WHERE
 GROUP BY content_title
 ORDER BY play_count DESC
 LIMIT 10
+
 ```
 
 ![Analytics Dashboard Example 1](media/image1.png)
