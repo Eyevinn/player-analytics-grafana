@@ -25,55 +25,38 @@ With ClickHouse endpoint, database, username and password on hand, you’re read
 ## 0.2 Provision Grafana on Eyevinn OSC
 
 1. Create the admin‐password secret
-
 OSC UI → Web Services → Service Secrets → New Secret
-
-Name: grafana-admin-pw
-
+Name: grafana(eg)
 Value: <your-password> → Create Secret
 
 2. Launch Grafana
-
 OSC UI → Web Services → Grafana → Create Grafana
-
-Name: " "
-
+Name: grafana(eg)
 Plugins to Preinstall: vertamedia-clickhouse-datasource
-
 Attach Secret: grafana-admin-pw
 
 Click Create → wait for Status: running
 
 3. Bind your secret to the instance
-
-My grafanas → find my-grafana → “⋮” → Instance parameters
-
-Admin password secret: grafana-admin-pw → Save
+My grafanas → find mygrafana → “⋮” → Instance parameters
+Admin password secret: grafana → Save
 
 4. Log in to Grafana
-
 Username: admin
-
-Password: (the value you set in grafana-admin-pw)
+Password: (the value set in grafana)
 
 5. Add ClickHouse data source
-
 . Connections → Data sources → Add data source
-
 . Select the Altinity plugin for ClickHouse
 
 Edit the clickhouse URL- https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
 
-Auth → Basic auth: on
+-Auth → Basic auth: on
+-User: <clickhouse-username>
+-Password: <clickhouse-password>
+-Additional → Default database: <your-database>
 
-User: <clickhouse-username>
-
-Password: <clickhouse-password>
-
-Additional → Default database: <your-database>
-
-Save & test → Data source is working
-
+-Save & test → Data source is working
 
 ---
 
