@@ -33,15 +33,18 @@ Value: <your-password> → Create Secret
 
 
 
-
-
 3. Launch Grafana
 OSC UI → Web Services → Grafana → Create Grafana
 Name: grafana(eg)
 Plugins to Preinstall: vertamedia-clickhouse-datasource
-Attach Secret: grafana-admin-pw
+Attach Secret: grafana
+
+<img width="441" alt="Screenshot 2025-04-23 at 14 06 08" src="https://github.com/user-attachments/assets/b65d5256-6efb-49c1-8a18-208599ac5fcb" />
 
 Click Create → wait for Status: running
+
+<img width="404" alt="Screenshot 2025-04-23 at 14 08 16" src="https://github.com/user-attachments/assets/e2b3b7f1-399e-4293-bc8a-7b23e56e02ed" />
+
 
 3. Bind your secret to the instance
 My grafanas → find mygrafana → “⋮” → Instance parameters
@@ -51,9 +54,25 @@ Admin password secret: grafana → Save
 Username: admin
 Password: (the value set in grafana)
 
-5. Add ClickHouse data source
+
+<img width="450" alt="Screenshot 2025-04-23 at 14 09 55" src="https://github.com/user-attachments/assets/de9a6f29-d3a8-4e13-94e3-e326d84c07c0" />
+
+
+
+
+
+
+<img width="1126" alt="Screenshot 2025-04-23 at 14 12 31" src="https://github.com/user-attachments/assets/1d4b6d53-b844-4117-9e69-4ecb9dcbfd9e" />
+
+
+
+6. Add ClickHouse data source
 . Connections → Data sources → Add data source
 . Select the Altinity plugin for ClickHouse
+
+
+<img width="823" alt="Screenshot 2025-04-23 at 14 13 20" src="https://github.com/user-attachments/assets/5c0ab2d1-4e80-4e2d-92f7-883ff1bce3f1" />
+
 
 Edit the clickhouse URL- https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
 
