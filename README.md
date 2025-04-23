@@ -22,36 +22,57 @@ If you haven’t yet created a ClickHouse instance in Eyevinn’s Open Source Cl
 
 With ClickHouse endpoint, database, username and password on hand, you’re ready to move on.
 
-## 0.2. Provision Grafana 
+## 0.2 Provision Grafana on Eyevinn OSC
 
-You can also spin up a managed Grafana in OSC rather than running it locally:
+1. Create the admin‐password secret
 
-In the OSC web UI, go to Web Services → Grafana.
+OSC UI → Web Services → Service Secrets → New Secret
 
-https://app.osaas.io/dashboard/service/grafana-grafana
+Name: grafana-admin-pw
 
-Click Create grafana.
+Value: <your-password> → Create Secret
 
-Fill in the dialog:
+2. Launch Grafana
 
-**Name** : e.g. my-grafana
+OSC UI → Web Services → Grafana → Create Grafana
 
-**Region/Size:** choose as needed
+Name: " "
 
-**Attach Secret:** create/select a secret for the admin user password (e.g. grafana-admin-pw).
+Plugins to Preinstall: vertamedia-clickhouse-datasource
 
-Click Create and wait until it shows Running.
+Attach Secret: grafana-admin-pw
 
-* Copy the Public Endpoint URL for Grafana (e.g. https://grafana-...auto.prod.osaas.io).
+Click Create → wait for Status: running
 
-* Open it in the browser, and log in with:
+3. Bind your secret to the instance
+
+My grafanas → find my-grafana → “⋮” → Instance parameters
+
+Admin password secret: grafana-admin-pw → Save
+
+4. Log in to Grafana
 
 Username: admin
 
-Password: the value from your grafana-admin-pw secret.
+Password: (the value you set in grafana-admin-pw)
 
-Tip: If one prefers, we can skip managed Grafana and instead install it locally via Docker (see Section 1).
+5. Add ClickHouse data source
 
+. Connections → Data sources → Add data source
+
+. Select the Altinity plugin for ClickHouse
+
+Edit the clickhouse URL- https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
+
+Auth → Basic auth: on
+
+User: <clickhouse-username>
+
+Password: <clickhouse-password>
+
+Additional → Default database: <your-database>
+
+Save & test → Data source is working
 
 
 ---
