@@ -20,7 +20,39 @@ If you haven’t yet created a ClickHouse instance in Eyevinn’s Open Source Cl
 4. **Grab your connection details**
     - Copy the server’s endpoint URL, default database name, and the credentials you stored in your secret.
 
-With your ClickHouse endpoint, database, username and password on hand, you’re ready to move on.
+With ClickHouse endpoint, database, username and password on hand, you’re ready to move on.
+
+## 0.2. Provision Grafana 
+
+You can also spin up a managed Grafana in OSC rather than running it locally:
+
+In the OSC web UI, go to Web Services → Grafana.
+
+https://app.osaas.io/dashboard/service/grafana-grafana
+
+Click Create grafana.
+
+Fill in the dialog:
+
+Name: e.g. my-grafana
+
+Region/Size: choose as needed
+
+Attach Secret: create/select a secret for the admin user password (e.g. grafana-admin-pw).
+
+Click Create and wait until it shows Running.
+
+Copy the Public Endpoint URL for Grafana (e.g. https://grafana-...auto.prod.osaas.io).
+
+Open it in your browser, and log in with:
+
+Username: admin
+
+Password: the value from your grafana-admin-pw secret.
+
+Tip: If you prefer, you can skip managed Grafana and instead install it locally via Docker (see Section 1).
+
+
 
 ---
 
