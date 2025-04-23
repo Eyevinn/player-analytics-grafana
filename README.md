@@ -34,23 +34,23 @@ Click Create grafana.
 
 Fill in the dialog:
 
-Name: e.g. my-grafana
+**Name** : e.g. my-grafana
 
-Region/Size: choose as needed
+**Region/Size:** choose as needed
 
-Attach Secret: create/select a secret for the admin user password (e.g. grafana-admin-pw).
+**Attach Secret:** create/select a secret for the admin user password (e.g. grafana-admin-pw).
 
 Click Create and wait until it shows Running.
 
-Copy the Public Endpoint URL for Grafana (e.g. https://grafana-...auto.prod.osaas.io).
+* Copy the Public Endpoint URL for Grafana (e.g. https://grafana-...auto.prod.osaas.io).
 
-Open it in your browser, and log in with:
+* Open it in the browser, and log in with:
 
 Username: admin
 
 Password: the value from your grafana-admin-pw secret.
 
-Tip: If you prefer, you can skip managed Grafana and instead install it locally via Docker (see Section 1).
+Tip: If one prefers, we can skip managed Grafana and instead install it locally via Docker (see Section 1).
 
 
 
