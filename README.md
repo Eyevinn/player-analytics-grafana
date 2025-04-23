@@ -29,7 +29,13 @@ OSC UI → Web Services → Service Secrets → New Secret
 Name: grafana(eg)
 Value: <your-password> → Create Secret
 
-2. Launch Grafana
+<img width="838" alt="Screenshot 2025-04-23 at 14 04 56" src="https://github.com/user-attachments/assets/e778b9c0-026e-4523-b4b2-4b34d8435e18" />
+
+
+
+
+
+3. Launch Grafana
 OSC UI → Web Services → Grafana → Create Grafana
 Name: grafana(eg)
 Plugins to Preinstall: vertamedia-clickhouse-datasource
