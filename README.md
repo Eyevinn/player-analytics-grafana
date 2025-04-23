@@ -233,4 +233,4 @@ To get started even faster, we’ve included a ready-made Grafana dashboard JSON
 
 ---
 
-Now you—and anyone on your team—can spin up Grafana, connect to ClickHouse in Eyevinn OSC, and immediately start exploring session & event metrics with a fully-fleshed template.
+Now, one can spin up Grafana, connect to ClickHouse in Eyevinn OSC, and immediately start exploring session & event metrics with a fully fleshed template.
