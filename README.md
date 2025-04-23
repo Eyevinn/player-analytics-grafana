@@ -53,10 +53,10 @@ In Grafana's left menu, go to Configuration (⚙️) → Data Sources → Add da
 Choose ClickHouse.
 
 Fill in connection details:
-url: https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io:8443
+url: https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
 default_database: epas_default        
-user:     'epasdev'           
-password: 'epasdev' 
+user:     ''           
+password: '' 
 
 Click Save & and one should see "Data source is working."
 
@@ -138,7 +138,7 @@ GROUP BY time, reason
 ORDER BY time ASC
 ```
 
-Visualization: Table or Bar chart ,time series etc
+Visualization: Table or Bar chart, time series, etc
 
 ```
 
