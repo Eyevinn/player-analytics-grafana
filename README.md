@@ -52,8 +52,9 @@ In Grafana's left menu, go to Configuration (⚙️) → Data Sources → Add da
 
 Choose ClickHouse.
 
-Fill in connection details:
+Fill in connection details: sample values are provided below
 url: https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
+
 default_database: epas_default        
 user:     ''           
 password: '' 
