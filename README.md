@@ -18,7 +18,7 @@ Before starting this guide, you should have:
   -  ClickHouse connection details:
   - Endpoint URL: https://<your-clickhouse-endpoint>/play
   - Database name (typically `epas_default`)
-  - `<Clickhouse-Username>` and <Clickhouse-password>
+  - `<Clickhouse-Username>` and `<Clickhouse-password>`
 
 ## Step 1: Create a Grafana Instance
 
@@ -83,8 +83,8 @@ There are two options for running Grafana:
      - URL: `https://<your-clickhouse-endpoint>/play`
      - Default database: database name (typically `epas_default`)
      - Basic Auth: Enable
-     - User: ClickHouse username
-     - Password: ClickHouse password
+     - User: `<ClickHouse username>`
+     - Password: `<ClickHouse password>`
    - Click "Save & Test" - Check "Data source is working"
 
 ## Step 3: Create Analytics Dashboards
