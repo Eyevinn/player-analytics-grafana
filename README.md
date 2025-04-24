@@ -18,7 +18,7 @@ Before starting this guide, you should have:
   -  ClickHouse connection details:
   - Endpoint URL: https://<your-clickhouse-endpoint>/play
   - Database name (typically `epas_default`)
-  - Username and password
+  - `<Clickhouse-Username>` and <Clickhouse-password>
 
 ## Step 1: Create a Grafana Instance
 
