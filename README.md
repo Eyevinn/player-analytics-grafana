@@ -10,14 +10,13 @@ The complete analytics pipeline consists of the following components:
 
 This guide focuses on setting up the visualization layer (Grafana) that connects to the ClickHouse database, allowing to build dashboards for analyzing playback sessions and events.
 
-![Architecture Diagram](https://github.com/user-attachments/assets/placeholder/800/400)
 
 ## Prerequisites
 
 Before starting this guide, you should have:
 - An existing ClickHouse instance with analytics data (this is typically already set up as part of the analytics worker)
-- Your ClickHouse connection details:
-  - Endpoint URL
+  -  ClickHouse connection details:
+  - Endpoint URL: https://eyevinnlab-epasdev.clickhouse-clickhouse.auto.prod.osaas.io/play
   - Database name (typically `epas_default`)
   - Username and password
 
