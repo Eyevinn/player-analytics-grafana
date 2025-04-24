@@ -16,7 +16,7 @@ This guide focuses on setting up the visualization layer (Grafana) that connects
 Before starting this guide, one should have:
 - An existing ClickHouse instance with analytics data (this is already set up as part of the analytics worker)
   -  ClickHouse connection details:
-  - Endpoint URL: https://<your-clickhouse-endpoint>/play
+  - Endpoint URL: URL: `https://<your-clickhouse-endpoint>/play`
   - Database name (typically `epas_default`)
   - `<Clickhouse-Username>` and `<Clickhouse-password>`
 
