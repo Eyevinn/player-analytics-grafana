@@ -124,7 +124,6 @@ WHERE timestamp BETWEEN $__from AND $__to
 GROUP BY time, event
 ORDER BY time ASC
 ```
-*Visualization: Time series graph*
 
 #### Most Popular Content
 
@@ -143,6 +142,10 @@ LIMIT 10
 ```
 *Visualization: Bar chart*
 
+<img width="598" alt="Screenshot 2025-04-24 at 11 42 19" src="https://github.com/user-attachments/assets/103f841d-aae4-4e28-a0aa-a4121796ad68" />
+
+
+
 #### Playback Errors
 
 ```sql
@@ -159,6 +162,9 @@ GROUP BY time, reason
 ORDER BY time ASC
 ```
 *Visualization: Time series or table*
+
+<img width="669" alt="Screenshot 2025-04-24 at 11 30 53" src="https://github.com/user-attachments/assets/a63cfbb9-68b9-4c18-9986-28478b6d228f" />
+
 
 ## Extending Your Dashboards
 
@@ -209,29 +215,6 @@ SELECT DISTINCT JSONExtractString(payload, 'contentTitle') FROM epas_default WHE
 -- Then use in your panel queries
 WHERE JSONExtractString(payload, 'contentTitle') = '$content_title'
 ```
-<img width="851" alt="Screenshot 2025-04-24 at 11 28 28" src="https://github.com/user-attachments/assets/9f70e8dd-6f45-409f-81c0-211f23aa613e" />
-
-
-
-
-
-
-<img width="431" alt="Screenshot 2025-04-24 at 11 30 34" src="https://github.com/user-attachments/assets/4cfa8951-bd37-45a5-be03-8db63596abdf" />
-
-
-
-
-
-
-
-
-<img width="669" alt="Screenshot 2025-04-24 at 11 30 53" src="https://github.com/user-attachments/assets/a63cfbb9-68b9-4c18-9986-28478b6d228f" />
-
-
-
-
-
-
 
 
 Remember to save the dashboard regularly as you build it!
