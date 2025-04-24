@@ -29,8 +29,12 @@ There are two options for running Grafana:
 1. **Create the admin password secret**
    - In OSC UI → Web Services → Service Secrets → New Secret
    - Name: `grafana` (or your preferred name)
-   - Value: Desired password
+   - `<Value>`: Desired password
    - Click "Create Secret"
+
+  <img width="434" alt="Screenshot 2025-04-24 at 11 25 23" src="https://github.com/user-attachments/assets/fdeb0566-d53e-4d7d-8736-a5d20d767907" />
+   
+
 
 2. **Launch Grafana**
    - Go to OSC UI → Web Services → Grafana → Create Grafana
@@ -38,6 +42,12 @@ There are two options for running Grafana:
    - Plugins to Preinstall: `vertamedia-clickhouse-datasource`
    - Attach the secret created
    - Click "Create" and wait for the status to change to "running."
+  
+
+  <img width="405" alt="Screenshot 2025-04-24 at 11 33 31" src="https://github.com/user-attachments/assets/937a50e6-2fda-44cb-8204-0041330b2ca6" />
+
+
+
 
 3. **Bind the secret to the instance**
    - Go to "My grafanas" → find your instance → "⋮" → Instance parameters
@@ -45,8 +55,8 @@ There are two options for running Grafana:
 
 4. **Log in to Grafana**
    - Open the provided URL
-   - Username: `admin`
-   - Password: (the value set in your secret)
+   - `<Username>`: `admin`
+   - `<Password>`: (the value set in your secret)
 
 ### Option B: Run Grafana Locally with Docker
 
@@ -199,5 +209,18 @@ SELECT DISTINCT JSONExtractString(payload, 'contentTitle') FROM epas_default WHE
 -- Then use in your panel queries
 WHERE JSONExtractString(payload, 'contentTitle') = '$content_title'
 ```
+<img width="851" alt="Screenshot 2025-04-24 at 11 28 28" src="https://github.com/user-attachments/assets/9f70e8dd-6f45-409f-81c0-211f23aa613e" />
+
+
+<img width="431" alt="Screenshot 2025-04-24 at 11 30 34" src="https://github.com/user-attachments/assets/4cfa8951-bd37-45a5-be03-8db63596abdf" />
+
+
+
+
+
+<img width="669" alt="Screenshot 2025-04-24 at 11 30 53" src="https://github.com/user-attachments/assets/a63cfbb9-68b9-4c18-9986-28478b6d228f" />
+
+
+
 
 Remember to save the dashboard regularly as build it!
