@@ -13,7 +13,7 @@ This guide focuses on setting up the visualization layer (Grafana) that connects
 
 ## Prerequisites
 
-Before starting this guide, you should have:
+Before starting this guide, one should have:
 - An existing ClickHouse instance with analytics data (this is typically already set up as part of the analytics worker)
   -  ClickHouse connection details:
   - Endpoint URL: https://<your-clickhouse-endpoint>/play
@@ -231,4 +231,7 @@ WHERE JSONExtractString(payload, 'contentTitle') = '$content_title'
 
 
 
-Remember to save the dashboard regularly as build it!
+
+
+
+Remember to save the dashboard regularly as you build it!
