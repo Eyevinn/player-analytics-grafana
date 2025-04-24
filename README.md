@@ -96,6 +96,14 @@ There are two options for running Grafana:
      - User: `<ClickHouse username>`
      - Password: `<ClickHouse password>`
    - Click "Save & Test" - Check "Data source is working"
+  
+     
+  
+     <img width="1506" alt="Screenshot 2025-04-24 at 11 51 50" src="https://github.com/user-attachments/assets/3af93d44-0f1b-4374-a03d-6522fd414231" />
+
+  
+
+
 
 ## Step 3: Create Analytics Dashboards
 
