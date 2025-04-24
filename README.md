@@ -14,7 +14,7 @@ This guide focuses on setting up the visualization layer (Grafana) that connects
 ## Prerequisites
 
 Before starting this guide, one should have:
-- An existing ClickHouse instance with analytics data (this is typically already set up as part of the analytics worker)
+- An existing ClickHouse instance with analytics data (this is already set up as part of the analytics worker)
   -  ClickHouse connection details:
   - Endpoint URL: https://<your-clickhouse-endpoint>/play
   - Database name (typically `epas_default`)
@@ -30,7 +30,7 @@ There are two options for running Grafana:
    - In OSC UI → Web Services → Service Secrets → New Secret
    - Name: `grafana` (or your preferred name)
    - `<Value>`: Desired password
-   - Click "Create Secret"
+   - Click "Create Secret."
 
   <img width="434" alt="Screenshot 2025-04-24 at 11 25 23" src="https://github.com/user-attachments/assets/fdeb0566-d53e-4d7d-8736-a5d20d767907" />
    
