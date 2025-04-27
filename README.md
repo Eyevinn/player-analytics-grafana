@@ -98,10 +98,23 @@ There are two options for running Grafana:
    - Click "Save & Test" - Check "Data source is working"
   
      
-  
-     <img width="1506" alt="Screenshot 2025-04-24 at 11 51 50" src="https://github.com/user-attachments/assets/3af93d44-0f1b-4374-a03d-6522fd414231" />
+  <img width="715" alt="Screenshot 2025-04-27 at 17 34 25" src="https://github.com/user-attachments/assets/18a1ed30-212a-4b87-93dc-bf1939f7caee" />
+
+     
+
 
   
+<img width="376" alt="Screenshot 2025-04-27 at 17 34 45" src="https://github.com/user-attachments/assets/0be912f5-d8ce-4d1a-a580-53e069876bef" />
+
+
+
+
+
+
+<img width="1007" alt="Screenshot 2025-04-27 at 17 35 09" src="https://github.com/user-attachments/assets/f4ade298-025e-4310-8284-f16330871860" />
+
+
+
 
 
 
