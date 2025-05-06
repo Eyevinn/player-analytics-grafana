@@ -32,7 +32,8 @@ There are two options for running Grafana:
    - `<Value>`: Desired password
    - Click "Create Secret."
 
-  <img width="434" alt="Screenshot 2025-04-24 at 11 25 23" src="https://github.com/user-attachments/assets/fdeb0566-d53e-4d7d-8736-a5d20d767907" />
+  <img width="448" alt="Screenshot 2025-05-06 at 10 55 08" src="https://github.com/user-attachments/assets/9b7ca314-d547-4291-a9cc-6d3c02e23e33" />
+
    
 
 
@@ -40,7 +41,6 @@ There are two options for running Grafana:
    - Go to OSC UI → Web Services → Grafana → Create Grafana
    - Set name: `grafana` 
    - Plugins to Preinstall: `vertamedia-clickhouse-datasource`
-   - Attach the secret created
    - Click "Create" and wait for the status to change to "running."
   
 
@@ -48,15 +48,12 @@ There are two options for running Grafana:
 
 
 
-
-3. **Bind the secret to the instance**
-   - Go to "My grafanas" → find your instance → "⋮" → Instance parameters
-   - Select the admin password secret → Save
-
-4. **Log in to Grafana**
+3. **Log in to Grafana**
    - Open the provided URL
-   - `<Username>`: `admin`
-   - `<Password>`: (the value set in your secret)
+   - Default credentials:
+   - Username: `admin`
+   - Password: `admin`
+   - Set a new password when prompted
 
 ### Option B: Run Grafana Locally with Docker
 
