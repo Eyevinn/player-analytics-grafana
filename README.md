@@ -26,29 +26,21 @@ There are two options for running Grafana:
 
 ### Option A: Provision Grafana on Eyevinn OSC (Recommended)
 
-1. **Create the admin password secret**
-   - In OSC UI → Web Services → Service Secrets → New Secret
-   - Name: `grafana` (or your preferred name)
-   - `<Value>`: Desired password
-   - Click "Create Secret."
-
-  <img width="448" alt="Screenshot 2025-05-06 at 10 55 08" src="https://github.com/user-attachments/assets/9b7ca314-d547-4291-a9cc-6d3c02e23e33" />
-
-   
-
-
-2. **Launch Grafana**
+1. **Launch Grafana**
    - Go to OSC UI → Web Services → Grafana → Create Grafana
    - Set name: `grafana` 
    - Plugins to Preinstall: `vertamedia-clickhouse-datasource`
    - Click "Create" and wait for the status to change to "running."
   
+ <img width="448" alt="Screenshot 2025-05-06 at 10 55 08" src="https://github.com/user-attachments/assets/9b7ca314-d547-4291-a9cc-6d3c02e23e33" />
 
-  <img width="405" alt="Screenshot 2025-04-24 at 11 33 31" src="https://github.com/user-attachments/assets/937a50e6-2fda-44cb-8204-0041330b2ca6" />
+  
+
+ <img width="405" alt="Screenshot 2025-04-24 at 11 33 31" src="https://github.com/user-attachments/assets/937a50e6-2fda-44cb-8204-0041330b2ca6" />
 
 
 
-3. **Log in to Grafana**
+2. **Log in to Grafana**
    - Open the provided URL
    - Default credentials:
    - Username: `admin`
@@ -95,22 +87,13 @@ There are two options for running Grafana:
    - Click "Save & Test" - Check "Data source is working"
   
      
-  <img width="715" alt="Screenshot 2025-04-27 at 17 34 25" src="https://github.com/user-attachments/assets/18a1ed30-212a-4b87-93dc-bf1939f7caee" />
-
-     
-
-
-  
-<img width="376" alt="Screenshot 2025-04-27 at 17 34 45" src="https://github.com/user-attachments/assets/0be912f5-d8ce-4d1a-a580-53e069876bef" />
+ <img width="652" alt="Screenshot 2025-05-08 at 12 55 38" src="https://github.com/user-attachments/assets/d2c025cc-2ffd-446b-aebc-a4d792c54804" />
 
 
 
 
 
-
-<img width="1007" alt="Screenshot 2025-04-27 at 17 35 09" src="https://github.com/user-attachments/assets/f4ade298-025e-4310-8284-f16330871860" />
-
-
+ <img width="701" alt="Screenshot 2025-05-08 at 12 55 51" src="https://github.com/user-attachments/assets/bc119c38-a153-4924-8bc6-4e01952d8b65" />
 
 
 
@@ -160,9 +143,6 @@ LIMIT 10
 ```
 *Visualization: Bar chart*
 
-<img width="598" alt="Screenshot 2025-04-24 at 11 42 19" src="https://github.com/user-attachments/assets/103f841d-aae4-4e28-a0aa-a4121796ad68" />
-
-
 
 #### Playback Errors
 
@@ -180,8 +160,6 @@ GROUP BY time, reason
 ORDER BY time ASC
 ```
 *Visualization: Time series or table*
-
-<img width="669" alt="Screenshot 2025-04-24 at 11 30 53" src="https://github.com/user-attachments/assets/a63cfbb9-68b9-4c18-9986-28478b6d228f" />
 
 
 ## Extending Your Dashboards
@@ -233,6 +211,17 @@ SELECT DISTINCT JSONExtractString(payload, 'contentTitle') FROM epas_default WHE
 -- Then use in your panel queries
 WHERE JSONExtractString(payload, 'contentTitle') = '$content_title'
 ```
+
+<img width="692" alt="Screenshot 2025-05-08 at 12 52 46" src="https://github.com/user-attachments/assets/60c48be3-faa6-4371-9a22-84a974b3670b" />
+
+
+<img width="696" alt="Screenshot 2025-05-08 at 12 53 05" src="https://github.com/user-attachments/assets/f995d9a5-edb9-49df-abed-ba468ac703c7" />
+
+
+<img width="694" alt="Screenshot 2025-05-08 at 12 52 56" src="https://github.com/user-attachments/assets/0b64cd03-2baa-4c3f-b40d-8bd57cdbbc4c" />
+
+
+
 
 
 Remember to save the dashboard regularly as you build it!
