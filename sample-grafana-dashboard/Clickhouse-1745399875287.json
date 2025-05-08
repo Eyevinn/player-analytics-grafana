@@ -262,7 +262,7 @@
       "id": 2,
       "options": {
         "barRadius": 0,
-        "barWidth": 0.97,
+        "barWidth": 0.85,
         "fullHighlight": false,
         "groupWidth": 0.7,
         "legend": {
@@ -290,7 +290,7 @@
             "uid": "del69rnlvegw0f"
           },
           "editorType": "sql",
-          "format": 1,
+          "format": 0,
           "meta": {
             "builderOptions": {
               "columns": [],
@@ -302,7 +302,7 @@
             }
           },
           "pluginVersion": "4.8.2",
-          "queryType": "table",
+          "queryType": "timeseries",
           "rawSql": "SELECT\n  toStartOfInterval(toDateTime(timestamp), INTERVAL 5 MINUTE) AS time,\n  'initiated_sessions' AS metric,\n  COUNT(DISTINCT sessionId) AS value\nFROM default.epas_default\nWHERE\n  timestamp >= toDateTime($__from / 1000)\n  AND timestamp <= toDateTime($__to / 1000)\n  AND event = 'init'\nGROUP BY\n  time,\n  metric\nORDER BY\n  time",
           "refId": "A"
         }
@@ -384,7 +384,7 @@
           "mode": "single",
           "sort": "none"
         },
-        "xField": "metric",
+        "xField": "time",
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 100
       },
@@ -396,7 +396,7 @@
             "uid": "del69rnlvegw0f"
           },
           "editorType": "sql",
-          "format": 1,
+          "format": 0,
           "meta": {
             "builderOptions": {
               "columns": [],
@@ -408,18 +408,12 @@
             }
           },
           "pluginVersion": "4.8.2",
-          "queryType": "table",
+          "queryType": "timeseries",
           "rawSql": "\nSELECT\n  toStartOfMinute(timestamp) AS \"time\",\n  event                      AS \"metric\",\n  count(*)                   AS \"value\"\nFROM default.epas_default\nWHERE\n  timestamp >= toDateTime($__from / 1000)\n  AND timestamp <= toDateTime($__to   / 1000)\nGROUP BY\n  time, metric\nORDER BY\n  time ASC, metric\n\n",
           "refId": "A"
         }
       ],
       "title": "Event Type",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {}
-        }
-      ],
       "type": "barchart"
     }
   ],
@@ -437,5 +431,5 @@
   "timezone": "browser",
   "title": "counting events",
   "uid": "aekgm1nvquozkd",
-  "version": 8
+  "version": 10
 }
